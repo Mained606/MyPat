@@ -40,6 +40,5 @@ namespace MyPet.AI
         {
             return stateMachine.ChangeState<R>();
         }
-
     }
 }

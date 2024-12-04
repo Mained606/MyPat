@@ -26,7 +26,6 @@ namespace MyPet.AI
         public virtual void OnEnter() {}                // 상태 전환 시 상태로 들어올 때 1회 실행
         public abstract void Update(float deltaTime);   // 상태 실행중 
         public virtual void OnExit() {}                 // 상태 전환시 나갈 때 1회 실행
-
     }
 
     /// <summary>

@@ -2,23 +2,22 @@ using UnityEngine;
 
 namespace MyPet.AI
 {
-    public class CatController : AnimalController
+    public class DogController : AnimalController
     {
         protected override void Start()
         {
-            base.Start();               // StateMachine 생성, IdleState() 등록
+            base.Start();
 
-            // 고양이 고유의 상태 추가 등록
-            stateMachine.AddState(new IdleState());
-            stateMachine.AddState(new SitState());
             stateMachine.AddState(new DrinkState());
+            stateMachine.AddState(new SitState());
+            stateMachine.AddState(new DogIdleState());
 
-            ChangeState<IdleState>();
+            ChangeState<DogIdleState>();
         }
 
         public void Idle()
         {
-            ChangeState<IdleState>();
+            ChangeState<DogIdleState>();
         }
 
         public void Sit()
@@ -30,5 +29,5 @@ namespace MyPet.AI
         {
             ChangeState<DrinkState>();
         }
-    }
+    }    
 }
